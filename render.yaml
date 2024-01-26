@@ -4,3 +4,6 @@ services:
   env: python
   buildCommand: python manage.py migrate && python manage.py collectstatic --noinput
   startCommand: gunicorn iqraShop.wsgi:application
+  environment:
+    - key: DATABASE_URL
+      value: "sqlite:////absolute/path/to/db.sqlite3"
