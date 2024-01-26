@@ -3,5 +3,7 @@ services:
 - type: web
   name: app
   env: python
-  buildCommand: python manage.py migrate && python manage.py collectstatic --noinput
+  startCommand: |
+  python manage.py migrate
+  gunicorn iqraShop.wsgi:application
   startCommand: gunicorn iqraShop.wsgi:application
