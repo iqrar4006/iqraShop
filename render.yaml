@@ -2,7 +2,7 @@ services:
 - type: web
   name: app
   env: python
-  buildCommand: python manage.py migrate && python manage.py collectstatic --noinput
+  buildCommand: python manage.py migrate --run-syncdb  && python manage.py collectstatic --noinput
   startCommand: gunicorn iqraShop.wsgi:application
   environment:
     - key: DATABASE_URL
