@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+=!b6u9*v9hr1g3@)ar$f6m4r1+r#58=qy163i4a)_r*d8ee*o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['iqrashop.onrender.com']
 
 
 # Application definition
